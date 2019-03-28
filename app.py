@@ -34,6 +34,7 @@ def bot():
     # แต่ก็สามารถประมวลผลข้อมูลประเภทอื่นได้นะครับ
     # เช่น ถ้าส่งมาเป็น location ทำการดึง lat long ออกมาทำบางอย่าง เป็นต้น
     if msgType != 'text':
+        print('in if')
         reply(replyToken, ['Only text is allowed.'])
         return 'OK',200
     
