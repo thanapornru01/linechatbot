@@ -22,7 +22,7 @@ def bot():
     msg_in_json = request.get_json()
     msg_in_string = json.dumps(msg_in_json)
     text = msg_in_json["events"][0]['message']['text'].lower().strip()
-    
+    print(msg_in_json["events"][0]['message']['text'].lower().strip())
     # Token สำหรับตอบกลับ (จำเป็นต้องใช้ในการตอบกลับ)
     replyToken = msg_in_json["events"][0]['replyToken']
     
@@ -34,13 +34,13 @@ def bot():
     # แต่ก็สามารถประมวลผลข้อมูลประเภทอื่นได้นะครับ
     # เช่น ถ้าส่งมาเป็น location ทำการดึง lat long ออกมาทำบางอย่าง เป็นต้น
     if msgType != 'text':
-        print('in if')
         reply(replyToken, ['Only text is allowed.'])
         return 'OK',200
     
     # ตรงนี้ต้องแน่ใจว่า msgType เป็นประเภท text ถึงเรียกได้ครับ 
     # lower เพื่อให้เป็นตัวพิมพ์เล็ก strip เพื่อนำช่องว่างหัวท้ายออก ครับ
     if(text == "How are you"):
+         print('in if')
          replyQueue.append("I am Fine")
          replyQueue.append("How about you")
          reply(replyToken, replyQueue[:5])
