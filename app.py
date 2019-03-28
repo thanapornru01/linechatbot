@@ -40,8 +40,9 @@ def bot():
     # ตรงนี้ต้องแน่ใจว่า msgType เป็นประเภท text ถึงเรียกได้ครับ 
     # lower เพื่อให้เป็นตัวพิมพ์เล็ก strip เพื่อนำช่องว่างหัวท้ายออก ครับ
     text = msg_in_json["events"][0]['message']['text'].lower().strip()
-    if(text == "string"):
-         replyQueue.append(msg_in_string)
+    if(text == "How are you"):
+         replyQueue.append("I am Fine")
+         replyQueue.append("How about you")
          reply(replyToken, replyQueue[:5])
          return 'OK', 200
 
