@@ -21,6 +21,7 @@ def bot():
     # ข้อความที่ได้รับมา
     msg_in_json = request.get_json()
     msg_in_string = json.dumps(msg_in_json)
+    text = msg_in_json["events"][0]['message']['text'].lower().strip()
     
     # Token สำหรับตอบกลับ (จำเป็นต้องใช้ในการตอบกลับ)
     replyToken = msg_in_json["events"][0]['replyToken']
@@ -39,7 +40,11 @@ def bot():
     # ตรงนี้ต้องแน่ใจว่า msgType เป็นประเภท text ถึงเรียกได้ครับ 
     # lower เพื่อให้เป็นตัวพิมพ์เล็ก strip เพื่อนำช่องว่างหัวท้ายออก ครับ
     text = msg_in_json["events"][0]['message']['text'].lower().strip()
-    
+    if(text == "string"):
+         replyQueue.append(msg_in_string)
+         reply(replyToken, replyQueue[:5])
+         return 'OK', 200
+
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ exact match
     # response_dict = {'สวัสดี':'สวัสดีครับ'}
     # if text in response_dict:
