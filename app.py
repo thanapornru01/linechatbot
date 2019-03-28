@@ -39,7 +39,7 @@ def bot():
     
     # ตรงนี้ต้องแน่ใจว่า msgType เป็นประเภท text ถึงเรียกได้ครับ 
     # lower เพื่อให้เป็นตัวพิมพ์เล็ก strip เพื่อนำช่องว่างหัวท้ายออก ครับ
-    if(text == "How are you"):
+    if(text == "how are you"):
          print('in if')
          replyQueue.append("I am Fine")
          replyQueue.append("How about you")
