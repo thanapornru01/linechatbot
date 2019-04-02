@@ -41,8 +41,8 @@ def bot():
     # lower เพื่อให้เป็นตัวพิมพ์เล็ก strip เพื่อนำช่องว่างหัวท้ายออก ครับ
     if(text == "how are you"):
          print('in if')
-         replyQueue.append("I am Fine")
-         replyQueue.append("How about you")
+         replyQueue.append("I am Fat")
+         replyQueue.append("and you")
          reply(replyToken, replyQueue[:5])
          return 'OK', 200
 
