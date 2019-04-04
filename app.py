@@ -52,12 +52,17 @@ def bot():
          replyQueue.append("ทางเราขอแนะนำให้ทานยาพาราเซตามอลน่ะค่ะ")
          reply(replyToken, replyQueue[:5])
          return 'OK', 200
-    else:
+    else if:
          replyQueue.append("มีอาการอะไรเพิ่มเติมอีกไหมค่ะ")
          reply(replyToken, replyQueue[:5])
          return 'OK', 200
+    else(text == "มี"):
+         print('in else')
+         replyQueue.append("ไม่ทราบว่ามีอาการยังไงค่ะ")
+         reply(replyToken, replyQueue[:5])
+         return 'OK', 200   
         
-    if(text == "มีเจ็บคอไอ"):
+    if(text == "เจ็บคอไอ"):
          print('in if')
          replyQueue.append("ไอเยอะหรอค่ะ")
          replyQueue.append("ทางเราขอแนะนำให้ทานยาแก้ไอน้ำดำน่ะค่ะ")
