@@ -50,9 +50,17 @@ def bot():
          print('in if')
          replyQueue.append("ปวดหัวหรอค่ะ")
          replyQueue.append("ทางเราขอแนะนำให้ทานยาพาราเซตามอลน่ะค่ะ")
+    else:
+         replyQueue.append("มีอาการอะไรเพิ่มเติมอีกไหมค่ะ")
          reply(replyToken, replyQueue[:5])
          return 'OK', 200
-            
+        
+    if(text == "มีเจ็บคอไอ"):
+         print('in if')
+         replyQueue.append("ไอเยอะหรอค่ะ")
+         replyQueue.append("ทางเราขอแนะนำให้ทานยาแก้ไอน้ำดำน่ะค่ะ")
+         reply(replyToken, replyQueue[:5])
+         return 'OK', 200   
 
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ exact match
     # response_dict = {'สวัสดี':'สวัสดีครับ'}
