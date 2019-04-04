@@ -50,7 +50,7 @@ def bot():
     response_dict = {'สวัสดี':'สวัสดีครับ'}
     if text in response_dict:
          replyQueue.append(reponse_dict[text])
-     else:
+    else:
          replyQueue.append('ไม่รู้ว่าจะตอบอะไรดี TT')
        
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ non-exact match
