@@ -43,7 +43,7 @@ def bot():
          print('in if')
          replyQueue.append("ปวดหัวหรอค่ะ")
          replyQueue.append("ขอแนะนำให้ทานยาพาราเซตามอลนะคะ")
-    else
+    else:
          replyQueue.append("มีอาการอย่างอื่นเพิ่มเติมไหมค่ะ")
          reply(replyToken, replyQueue[:5])
          return 'OK', 200
