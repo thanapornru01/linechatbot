@@ -43,10 +43,6 @@ def bot():
          print('in if')
          replyQueue.append("ปวดหัวหรอค่ะ")
          replyQueue.append("ขอแนะนำให้ทานยาพาราเซตามอลนะคะ")
-    if(text == "ปวดท้อง"):
-         print('in if')
-         replyQueue.append("ปวดท้องหรอค่ะ")
-         replyQueue.append("ขอแนะนำให้ทานยาธาตุน้ำแดงนะคะ")
          reply(replyToken, replyQueue[:5])
          return 'OK', 200
 
