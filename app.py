@@ -52,7 +52,7 @@ def bot():
          replyQueue.append("ทางเราขอแนะนำให้ทานยาพาราเซตามอลน่ะค่ะ")
          reply(replyToken, replyQueue[:5])
          return 'OK', 200
-    else if:
+    else:
          replyQueue.append("มีอาการอะไรเพิ่มเติมอีกไหมค่ะ")
          reply(replyToken, replyQueue[:5])
          return 'OK', 200
