@@ -43,15 +43,17 @@ def bot():
          print('in if')
          replyQueue.append("ปวดหัวหรอค่ะ")
          replyQueue.append("ขอแนะนำให้ทานยาพาราเซตามอลนะคะ")
+    else
+         replyQueue.append("มีอาการอย่างอื่นเพิ่มเติมไหมค่ะ")
          reply(replyToken, replyQueue[:5])
          return 'OK', 200
 
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ exact match
-    response_dict = {'สวัสดี':'สวัสดีครับ'}
-    if text in response_dict:
-         replyQueue.append(reponse_dict[text])
-    else:
-         replyQueue.append('ไม่รู้ว่าจะตอบอะไรดี TT')
+    # response_dict = {'สวัสดี':'สวัสดีครับ'}
+    # if text in response_dict:
+    # replyQueue.append(reponse_dict[text])
+    # else:
+    # replyQueue.append('ไม่รู้ว่าจะตอบอะไรดี TT')
        
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ non-exact match
     # โดยที่มี method ชื่อ find_closest_sentence ที่ใช้การเปรียบเทียบประโยค
