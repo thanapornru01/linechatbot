@@ -39,12 +39,18 @@ def bot():
     
     # ตรงนี้ต้องแน่ใจว่า msgType เป็นประเภท text ถึงเรียกได้ครับ 
     # lower เพื่อให้เป็นตัวพิมพ์เล็ก strip เพื่อนำช่องว่างหัวท้ายออก ครับ
-    # if(text == "ปวดหัว"):
-         #print('in if')
-         #replyQueue.append("ปวดหัวหรอค่ะ")
-         #replyQueue.append("ขอแนะนำให้ทานยาพาราเซตามอลนะคะ")
-         #reply(replyToken, replyQueue[:5])
-         #return 'OK', 200
+    if(text == "ปวดหัว"):
+         print('in if')
+         replyQueue.append("ปวดหัวหรอค่ะ")
+         replyQueue.append("ขอแนะนำให้ทานยาพาราเซตามอลนะคะ")
+         reply(replyToken, replyQueue[:5])
+         return 'OK', 200
+        
+    if(text == "ปวดท้อง"):
+         print('in if')
+         replyQueue.append("ปวดท้องหรอค่ะ")
+         reply(replyToken, replyQueue[:5])
+         return 'OK', 200
 
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ exact match
     # response_dict = {'สวัสดี':'สวัสดีครับ'}
