@@ -56,7 +56,8 @@ def bot():
          replyQueue.append("มีอาการอะไรเพิ่มเติมอีกไหมค่ะ")
          reply(replyToken, replyQueue[:5])
          return 'OK', 200
-    else(text == "มี"):
+       
+    if(text == "มี"):
          print('in else')
          replyQueue.append("ไม่ทราบว่ามีอาการยังไงค่ะ")
          reply(replyToken, replyQueue[:5])
