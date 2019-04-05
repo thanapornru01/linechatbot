@@ -40,45 +40,32 @@ def bot():
     # ตรงนี้ต้องแน่ใจว่า msgType เป็นประเภท text ถึงเรียกได้ครับ 
     # lower เพื่อให้เป็นตัวพิมพ์เล็ก strip เพื่อนำช่องว่างหัวท้ายออก ครับ
     if(text == "สวัสดี"):
-         print('in if')
-         replyQueue.append("สวัสดีค่ะ")
-         replyQueue.append("เป็นอะไรมาค่ะ")
-         reply(replyToken, replyQueue[:5])
-         return 'OK', 200
+        print('in if')
+        replyQueue.append("สวัสดีค่ะ")
+        replyQueue.append("เป็นอะไรมาค่ะ")
+        reply(replyToken, replyQueue[:5])
+        return 'OK', 200
         
     if(text == "ปวดหัวมาก"):
-         print('in if')
-         replyQueue.append("ปวดหัวหรอค่ะ")
-         replyQueue.append("ทางเราขอแนะนำให้ทานยาพาราเซตามอลน่ะค่ะ")
-         replyQueue.append("ไม่ทราบว่ามีอาการอะไรเพิ่มเติมอีกไหมค่ะ")
-         reply(replyToken, replyQueue[:5])
-         return 'OK', 200
+        print('in if')
+        replyQueue.append("ปวดหัวหรอค่ะ")
+        replyQueue.append("ทางเราขอแนะนำให้ทานยาพาราเซตามอลน่ะค่ะ")
+        replyQueue.append("ไม่ทราบว่ามีอาการอะไรเพิ่มเติมอีกไหมค่ะ")
+        reply(replyToken, replyQueue[:5])
+        return 'OK', 200
     
     if(text == "มี"):
-<<<<<<< HEAD
-         print('in if')
-         replyQueue.append("มีอาการยังไงค่ะ")
-=======
-         print('in else')
-         replyQueue.append("ไม่ทราบว่ามีอาการยังไงค่ะ")
->>>>>>> 527e313aa383732cd52fa7aaf8c617c36ec2b923
-         reply(replyToken, replyQueue[:5])
-         return 'OK', 200   
+        print('in if')
+        replyQueue.append("มีอาการยังไงค่ะ")
+        reply(replyToken, replyQueue[:5])
+        return 'OK', 200   
         
     if(text == "เจ็บคอไอ"):
-         print('in if')
-<<<<<<< HEAD
-         replyQueue.append("ไอหรอค่ะ")
-         replyQueue.append("ทางเราขอแนะนำให้ทานยาแก้ไอน้ำดำน่ะค่ะ")
-         reply(replyToken, replyQueue[:5])
-         return 'OK', 200 
-
-=======
-         replyQueue.append("ไอเยอะหรอค่ะ")
-         replyQueue.append("ทางเราขอแนะนำให้ทานยาแก้ไอน้ำดำน่ะค่ะ")
-         reply(replyToken, replyQueue[:5])
-         return 'OK', 200   
->>>>>>> 527e313aa383732cd52fa7aaf8c617c36ec2b923
+        print('in if')
+        replyQueue.append("ไอเยอะหรอค่ะ")
+        replyQueue.append("ทางเราขอแนะนำให้ทานยาแก้ไอน้ำดำน่ะค่ะ")
+        reply(replyToken, replyQueue[:5])
+        return 'OK', 200   
 
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ exact match
     # response_dict = {'สวัสดี':'สวัสดีครับ'}
