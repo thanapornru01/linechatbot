@@ -55,25 +55,37 @@ def bot():
          return 'OK', 200
     
     if(text == "มี"):
+<<<<<<< HEAD
          print('in if')
          replyQueue.append("มีอาการยังไงค่ะ")
+=======
+         print('in else')
+         replyQueue.append("ไม่ทราบว่ามีอาการยังไงค่ะ")
+>>>>>>> 527e313aa383732cd52fa7aaf8c617c36ec2b923
          reply(replyToken, replyQueue[:5])
          return 'OK', 200   
         
     if(text == "เจ็บคอไอ"):
          print('in if')
+<<<<<<< HEAD
          replyQueue.append("ไอหรอค่ะ")
          replyQueue.append("ทางเราขอแนะนำให้ทานยาแก้ไอน้ำดำน่ะค่ะ")
          reply(replyToken, replyQueue[:5])
          return 'OK', 200 
 
+=======
+         replyQueue.append("ไอเยอะหรอค่ะ")
+         replyQueue.append("ทางเราขอแนะนำให้ทานยาแก้ไอน้ำดำน่ะค่ะ")
+         reply(replyToken, replyQueue[:5])
+         return 'OK', 200   
+>>>>>>> 527e313aa383732cd52fa7aaf8c617c36ec2b923
 
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ exact match
     # response_dict = {'สวัสดี':'สวัสดีครับ'}
     # if text in response_dict:
-    #     replyQueue.append(reponse_dict[text])
+    # replyQueue.append(reponse_dict[text])
     # else:
-    #     replyQueue.append('ไม่รู้ว่าจะตอบอะไรดี TT')
+    # replyQueue.append('ไม่รู้ว่าจะตอบอะไรดี TT')
        
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ non-exact match
     # โดยที่มี method ชื่อ find_closest_sentence ที่ใช้การเปรียบเทียบประโยค
