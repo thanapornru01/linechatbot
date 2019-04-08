@@ -72,7 +72,11 @@ def bot():
         replyQueue.append("ป้อนชื่อสมุนไพรได้เลยนะคะ")
         reply(replyToken, replyQueue[:5])
         return 'OK', 200
+<<<<<<< HEAD
 
+=======
+       
+>>>>>>> 70abe995ddeacf0d0afe895d265ae1fc98e834b4
     if(text == "กะเพรา"):
         print('in if')
         replyQueue.append("กะเพราหรอค่ะ")
@@ -81,6 +85,7 @@ def bot():
         replyQueue.append("สำหรับเมล็ดกะเพรา ก็สามารถพอกตาให้ผงหรือฝุ่นที่เข้าตาหลุดออกมาได้อย่างง่ายดาย")
         replyQueue.append("สนใจสมุนไพรตัวอื่นอีกไหมค่ะ")
         reply(replyToken, replyQueue[:5])
+<<<<<<< HEAD
         return 'OK', 200 
 
     if(text == "ไม่"):
@@ -88,6 +93,15 @@ def bot():
         replyQueue.append("ขอบคุณนะคะ")
         reply(replyToken, replyQueue[:5])
         return 'OK', 200  
+=======
+        return 'OK', 200  
+       
+     if(text == "ไม่"):
+        print('in if')
+        replyQueue.append("ขอบคุณนะคะ")
+        reply(replyToken, replyQueue[:5])
+        return 'OK', 200
+>>>>>>> 70abe995ddeacf0d0afe895d265ae1fc98e834b4
 
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ exact match
     # response_dict = {'สวัสดี':'สวัสดีครับ'}
