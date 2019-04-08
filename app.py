@@ -42,30 +42,52 @@ def bot():
     if(text == "สวัสดี"):
         print('in if')
         replyQueue.append("สวัสดีค่ะ")
-        replyQueue.append("เป็นอะไรมาค่ะ")
+        replyQueue.append("นี่คือบอทสาระน่ารู้เกี่ยวกับสมุนไพรไทยพร้อมแนะนำสรรพคุณรักษาโรคค่ะ")
+        replyQueue.append("เริ่มต้นเลยนะค่ะ")
         reply(replyToken, replyQueue[:5])
         return 'OK', 200
         
-    if(text == "ปวดหัวมาก"):
+    if(text == "ขมิ้นชัน"):
         print('in if')
-        replyQueue.append("ปวดหัวหรอค่ะ")
-        replyQueue.append("ทางเราขอแนะนำให้ทานยาพาราเซตามอลน่ะค่ะ")
-        replyQueue.append("ไม่ทราบว่ามีอาการอะไรเพิ่มเติมอีกไหมค่ะ")
+        replyQueue.append("ขมิ้นชันหรอค่ะ")
+        replyQueue.append("เป็นไม้ล้มลุกมีสีเหลืองอมส้มมีเหง้าอยู่ใต้ดินมีกลิ่นหอม")
+        replyQueue.append("สรรพคุณใช้รักษาอาการที่เกี่ยวกับกระเพาะอาหาร")
+        replyQueue.append("รวมทั้งแก้ท้องเสียท้องร่วงจุกเสียดแน่นท้อง")
+        replyQueue.append("สนใจสมุนไพรตัวอื่นป้อนชื่อต่อได้เลยน่ะค่ะ")
         reply(replyToken, replyQueue[:5])
         return 'OK', 200
     
-    if(text == "มี"):
+    if(text == "ทองพันชั่ง"):
         print('in if')
-        replyQueue.append("มีอาการยังไงค่ะ")
+        replyQueue.append("ทองพันชั่งหรอค่ะ")
+        replyQueue.append("เป็นไม้พุ่มขนาดเล็ก ออกดอกสีขาว ส่วนที่ใช้ทำยาคือ ใบและราก ที่หากนำปริมาณ 1 กำมือมาต้มรับประทานเช้าเย็น")
+        replyQueue.append("สรรพคุณใช้ช่วยดับพิษไข้ รักษาโรคผิวหนัง ริดสีดวงทวารหนัก แก้ไอเป็นเลือด ฆ่าพยาธิ")
+        replyQueue.append("นอกจากนั้น ยังสามารถนำใบและรากมาตำละเอียด เพื่อรักษาโรคกลาก เกลื้อน ได้ด้วย")
+        replyQueue.append("สนใจสมุนไพรตัวอื่นอีกไหมค่ะ")
         reply(replyToken, replyQueue[:5])
         return 'OK', 200   
         
-    if(text == "เจ็บคอไอ"):
+    if(text == "สนใจค่ะ"):
         print('in if')
-        replyQueue.append("ไอเยอะหรอค่ะ")
-        replyQueue.append("ทางเราขอแนะนำให้ทานยาแก้ไอน้ำดำน่ะค่ะ")
+        replyQueue.append("ป้อนชื่อสมุนไพรได้เลยนะคะ")
         reply(replyToken, replyQueue[:5])
-        return 'OK', 200   
+        return 'OK', 200
+       
+    if(text == "กะเพรา"):
+        print('in if')
+        replyQueue.append("กะเพราหรอค่ะ")
+        replyQueue.append("สรรพคุณมีฤทธิ์ขับลม ช่วยแก้จุดเสียด แน่นท้อง แก้ปวดท้องอุจจาระ")
+        replyQueue.append("ส่วนน้ำสกัดทั้งต้น สามารถรักษาแผลในกระเพาะอาหาร")
+        replyQueue.append("สำหรับเมล็ดกะเพรา ก็สามารถพอกตาให้ผงหรือฝุ่นที่เข้าตาหลุดออกมาได้อย่างง่ายดาย")
+        replyQueue.append("สนใจสมุนไพรตัวอื่นอีกไหมค่ะ")
+        reply(replyToken, replyQueue[:5])
+        return 'OK', 200  
+       
+     if(text == "ไม่"):
+        print('in if')
+        replyQueue.append("ขอบคุณนะคะ")
+        reply(replyToken, replyQueue[:5])
+        return 'OK', 200
 
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ exact match
     # response_dict = {'สวัสดี':'สวัสดีครับ'}
