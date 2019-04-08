@@ -92,6 +92,8 @@ def bot():
     if(text == "ไม่"):
         print('in if')
         replyQueue.append("ขอบคุณนะคะ")
+    else:
+        replyQueue.append("ไม่พบข้อมูลการค้นหา")
         reply(replyToken, replyQueue[:5])
         return 'OK', 200
 
